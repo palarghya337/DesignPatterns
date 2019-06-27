@@ -1,4 +1,4 @@
-package com.designpattern.creational.factory;
+package com.designpatterns.creational.factory;
 
 public interface IMobile {
 

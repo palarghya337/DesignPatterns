@@ -1,6 +1,6 @@
-package com.designpattern.creational.factory;
+package com.designpatterns.creational.factory;
 
-import com.designpattern.creational.factory.IMobile.BRAND;
+import com.designpatterns.creational.factory.IMobile.BRAND;
 
 public class MobileFactory {
 
