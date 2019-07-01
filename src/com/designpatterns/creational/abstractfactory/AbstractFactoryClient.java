@@ -1,13 +1,15 @@
 package com.designpatterns.creational.abstractfactory;
 
 import com.designpatterns.creational.abstractfactory.AbstractFactory.FACTORY_TYPE;
+import com.designpatterns.interfaces.IProductA;
+import com.designpatterns.utils.Log;
 
 /**
  * https://www.oodesign.com/abstract-factory-pattern.html
  * @author apal
  *
  */
-public class Client {
+public class AbstractFactoryClient {
 
   public static void main(String[] args) {
     /*
@@ -20,9 +22,14 @@ public class Client {
      * • the creation of a library of products is needed, for
      * which is relevant only the interface, not the implementation, too.
      * */
-    AbstractFactory abstractFactory = FactoryMaker.getFactory(FACTORY_TYPE.FACTORY1);
-    AbstractProductA productA = abstractFactory.createProductA();
-    productA.operationA1();
-    productA.operationA2();
+    AbstractFactory abstractFactoryOne = FactoryMaker.getFactory(FACTORY_TYPE.FACTORY_ONE);
+    IProductA productA = abstractFactoryOne.createProductA();
+    productA.productOperationA();
+    Log.logInfo(productA.productOperationB());
+    
+    AbstractFactory abstractFactoryTwo = FactoryMaker.getFactory(FACTORY_TYPE.FACTORY_TWO);
+    IProductA productATwo = abstractFactoryTwo.createProductA();
+    productATwo.productOperationA();
+    Log.logInfo(productATwo.productOperationB());
   }
 }

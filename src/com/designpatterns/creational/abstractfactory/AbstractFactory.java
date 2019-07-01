@@ -1,10 +1,13 @@
 package com.designpatterns.creational.abstractfactory;
 
+import com.designpatterns.interfaces.IProductA;
+import com.designpatterns.interfaces.IProductB;
+
 public interface AbstractFactory {
 
   enum FACTORY_TYPE {
-    FACTORY1, FACTORY2;
+    FACTORY_ONE, FACTORY_TWO;
   }
-  AbstractProductA createProductA();
-  AbstractProductB createProductB();
+  IProductA createProductA();
+  IProductB createProductB();
 }
