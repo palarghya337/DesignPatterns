@@ -28,7 +28,7 @@ public class ProductFactory {
   public static IProductA createProductA(ProductType productType) {
     
     IProductA product = null;
-    if (IProductA.ProductType.PRODUCT_AONE.equals(productType)) {
+    if (ProductType.PRODUCT_AONE.equals(productType)) {
       product = new ProductAOne();
     } else if (ProductType.PRODUCT_ATWO.equals(productType)) {
       product = new ProductATwo();
